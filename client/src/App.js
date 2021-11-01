@@ -6,8 +6,8 @@ const App = ()=> {
     <div>
         <h1>this is the app component</h1>
     </div>
-    
-    )
+
+    );
 }
 
 export default App;
