@@ -52,10 +52,11 @@ const Post = ({post, setCurrentId}) => {
                     
                 </Button>
 
-
             </CardActions>
 
         </Card>
+
+        /// Need to fix styling 
         
        
        
