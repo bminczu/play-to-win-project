@@ -7,6 +7,7 @@ import moment from 'moment';
 import {useDispatch} from 'react-redux';
 import {deletePost, likePost} from '../../../actions/posts'
 import useStyles from './styles';
+import sports from '/Users/bartminczuk/Flatiron/play-to-win-project/client/src/images/sports.jpeg'
 
 const Post = ({post, setCurrentId}) => {
     
@@ -15,7 +16,7 @@ const Post = ({post, setCurrentId}) => {
     
     return(
         <Card className={classes.card}>
-            <CardMedia className={classes.media} image={post.selectedFile} player={post.player}/>
+            <CardMedia className={classes.media} image={post.selectedFile || sports } player={post.player}/>
             <div className={classes.overlay}>
                 <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
                 <Typography variant="h3"> {post.player} </Typography>

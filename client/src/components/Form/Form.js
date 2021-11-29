@@ -37,7 +37,7 @@ const Form = ({currentId, setCurrentId}) => {
 
     return(
         <Paper className = {classes.paper}>
-            <form autoComplete="off" noValidate={classes.form} onSubmit={handleSubmit}>
+            <form autoComplete="off" noValidate className={`${classes.form} ${classes.root}`}onSubmit={handleSubmit}>
                 <Typography variant="h6"> {currentId ? 'Editing' : 'Logging'} a Game </Typography>
                 <TextField name="player" variant="outlined" label="Player" fullWidth value={postData.player} onChange={(e)=> setPostData({...postData, player: e.target.value})}/>
                 <TextField name="gameName" variant="outlined" label="Game Played" fullWidth value={postData.gameName} onChange={(e)=> setPostData({...postData, gameName: e.target.value})}/>
