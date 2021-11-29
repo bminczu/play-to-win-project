@@ -30,7 +30,10 @@ const Post = ({post, setCurrentId}) => {
             </div>
                
             <div className={classes.details}>
-                <Typography variant="body2" color="inherit"> Winner: {post.winner}</Typography>
+                <Typography variant="h6" color="inherit"> Game: {post.gameName}</Typography>
+            </div>
+            <div className={classes.details}>
+                <Typography variant="h4" color="inherit"> Winner: {post.winner}</Typography>
             </div>
             
             <CardContent>
