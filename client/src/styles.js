@@ -12,12 +12,12 @@ export default makeStyles((theme) => ({
   },
   heading: {
     color: 'black',
-    background: "#000000",
-  background: "-webkit-linear-gradient(to right, #000000 0%, #CF1512 78%)",
-  background: "-moz-linear-gradient(to right, #000000 0%, #CF1512 78%)",
-  background: "linear-gradient(to right, #000000 0%, #CF1512 78%)",
-  WebkitBackgroundClip: "text",
-  WebkitTextFillColor: "transparent",
+   
+
+
+background: "linear-gradient(to right, #000000 0%, #CF1512 78%)",
+WebkitBackgroundClip: "text",
+WebkitTextFillColor: "transparent",
   },
 
   image: {
