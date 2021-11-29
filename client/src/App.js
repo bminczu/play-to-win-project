@@ -20,7 +20,7 @@ const App = ()=> {
     return (
     <Container maxwidth="lg">
         <AppBar className={classes.appBar} position= "static" color="inherit">
-            <img className={classes.image} src={compete} alt="compete" height="60"/>
+        <img className={classes.image} src={compete} alt="compete" height="60"/>
             <Typography className={classes.heading} variant="h3" color="black" align="center"> Play to Win </Typography>
             <img className={classes.image} src={compete} alt="compete" height="60"/>
         </AppBar>
