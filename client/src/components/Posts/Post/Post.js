@@ -26,13 +26,11 @@ const Post = ({post, setCurrentId}) => {
 
             </div> 
             <div className={classes.overlay2}>
-                <Button style={{color: 'white'}} size="small" onClick={()=> {setCurrentId(post._id)}}>
-                    <MoreHorizIcon fontSize="medium"/>
-                </Button>
+                <Button style={{color: 'white'}} size="small" onClick={()=> {setCurrentId(post._id)}}> <MoreHorizIcon fontSize="medium"/></Button>
             </div>
                
             <div className={classes.details}>
-                <Typography variant="h5" color="inherit"> Winner: {post.winner}</Typography>
+                <Typography variant="body2" color="inherit"> Winner: {post.winner}</Typography>
             </div>
             
             <CardContent>
@@ -57,7 +55,7 @@ const Post = ({post, setCurrentId}) => {
 
         </Card>
 
-        /// Need to fix styling 
+
         
        
        
