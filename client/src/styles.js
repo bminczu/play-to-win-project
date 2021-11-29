@@ -11,8 +11,15 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
   },
   heading: {
-    color: 'rgba(0,183,255, 1)',
+    color: 'black',
+    background: "#000000",
+    background: "-webkit-linear-gradient(to right, #000000 0%, #CF1512 78%)",
+    background: "-moz-linear-gradient(to right, #000000 0%, #CF1512 78%)",
+    background: "linear-gradient(to right, #000000 0%, #CF1512 78%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
   },
+
   image: {
     marginLeft: '15px',
   },
@@ -21,5 +28,7 @@ export default makeStyles((theme) => ({
     mainContainer: {
       flexDirection: 'column-reverse'
     }
-  }
+  },
+
+  
 }));
