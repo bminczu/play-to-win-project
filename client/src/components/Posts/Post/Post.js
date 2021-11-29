@@ -17,25 +17,25 @@ const Post = ({post, setCurrentId}) => {
         <Card className={classes.card}>
             <CardMedia className={classes.media} image={post.selectedFile} player={post.player}/>
             <div className={classes.overlay}>
-                <Typography variant="h6"> {post.creator} </Typography>
                 <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
+                <Typography variant="h3"> {post.player} </Typography>
+                
+                <Typography variant="h5" color="inherit"> Game: {post.gameName}</Typography>
+            
 
-           
-            </div>  
+            </div> 
             <div className={classes.overlay2}>
-                <Button style={{color: 'white'}} 
-                size="small" 
-                onClick={()=> {setCurrentId(post._id)}}>
-                    
+                <Button style={{color: 'white'}} size="small" onClick={()=> {setCurrentId(post._id)}}>
                     <MoreHorizIcon fontSize="medium"/>
                 </Button>
             </div>
+               
             <div className={classes.details}>
-                <Typography variant="body2" color="textSecondary">{post.winner}</Typography>
+                <Typography variant="h5" color="inherit"> Winner: {post.winner}</Typography>
             </div>
-            <Typography className={classes.player} variant="h5" gutterBottom> {post.player}</Typography>
+            
             <CardContent>
-            <Typography  variant="body2" color="textSecondary" component="p" gutterBottom> {post.message}</Typography>
+            <Typography  variant="body2" color="initial" component="p" gutterBottom> {post.note}</Typography>
             </CardContent>
             <CardActions className={classes.cardActions}>
                 <Button size="small" color="primary" onClick={() => dispatch(likePost(post._id))}>

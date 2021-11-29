@@ -41,8 +41,8 @@ const Form = ({currentId, setCurrentId}) => {
                 <Typography variant="h6"> {currentId ? 'Editing' : 'Logging'} a Game </Typography>
                 <TextField name="player" variant="outlined" label="Player" fullWidth value={postData.player} onChange={(e)=> setPostData({...postData, player: e.target.value})}/>
                 <TextField name="gameName" variant="outlined" label="Game Played" fullWidth value={postData.gameName} onChange={(e)=> setPostData({...postData, gameName: e.target.value})}/>
-                <TextField name="note" variant="outlined" label="Notes" fullWidth value={postData.note} onChange={(e)=> setPostData({...postData, note: e.target.value})}/>
-                <TextField name="winner" variant="outlined" label="winner (coma separated)" fullWidth value={postData.winner} onChange={(e)=> setPostData({...postData, winner: e.target.value.split(',') })}/>
+                <TextField name="note" variant="outlined" label="Note" fullWidth value={postData.note} onChange={(e)=> setPostData({...postData, note: e.target.value})}/>
+                <TextField name="winner" variant="outlined" label="Winner(s)" fullWidth value={postData.winner} onChange={(e)=> setPostData({...postData, winner: e.target.value.split(',') })}/>
                 <div className={classes.fileInput}><FileBase type="file" multiple={false} onDone={({base64}) => setPostData({...postData, selectedFile: base64})} />
                 <Button className={classes.buttonSubmit} variant="contained" size="large" color="primary" type="submit" fullWidth>Submit</Button>
                 <Button variant="contained" color="secondary" size="small" onClick={clear} type="submit" fullWidth>Clear</Button>
