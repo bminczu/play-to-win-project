@@ -30,7 +30,7 @@ const Post = ({post, setCurrentId}) => {
             </div>
                
             <div className={classes.details}>
-                <Typography variant="h6" color="inherit"> Game: {post.gameName}</Typography>
+                <Typography variant="h6" color="inherit"> Opponent: {post.opponent}</Typography>
             </div>
             <div className={classes.details}>
                 <Typography variant="h4" color="inherit"> Winner: {post.winner}</Typography>

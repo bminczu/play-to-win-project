@@ -14,7 +14,6 @@ const app = express();
 
 app.use(express.json({ limit: '30mb', extended: true }))
 app.use(express.urlencoded({ limit: '30mb', extended: true }))
-////related to depreceated bodyparser https://stackoverflow.com/questions/69030963/error-usefindandmodify-is-an-invalid-option //
 app.use(cors());
 app.use('/posts', postRoutes)
 
