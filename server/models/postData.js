@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 
 const postSchema = mongoose.Schema({
     player: String,
+    opponent: String,
     gameName: String,
     note: String,
     winner: [String],

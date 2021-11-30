@@ -40,7 +40,7 @@ const Form = ({currentId, setCurrentId}) => {
             <form autoComplete="off" noValidate className={`${classes.form} ${classes.root}`}onSubmit={handleSubmit}>
                 <Typography variant="h6"> {currentId ? 'Edit' : 'Log'} Game Entry</Typography>
                 <TextField name="player" variant="outlined" label="Player" fullWidth value={postData.player} onChange={(e)=> setPostData({...postData, player: e.target.value})}/>
-                <TextField name="opponent" variant="outlined" label="Opponent" fullWidth value={postData.oponent} onChange={(e)=> setPostData({...postData, oponent: e.target.value})}/>
+                <TextField name="opponent" variant="outlined" label="Opponent" fullWidth value={postData.opponent} onChange={(e)=> setPostData({...postData, opponent: e.target.value})}/>
                 <TextField name="gameName" variant="outlined" label="Game Played" fullWidth value={postData.gameName} onChange={(e)=> setPostData({...postData, gameName: e.target.value})}/>
                 <TextField name="winner" variant="outlined" label="Winner" fullWidth value={postData.winner} onChange={(e)=> setPostData({...postData, winner: e.target.value.split(',') })}/>
                 <TextField name="note" variant="outlined" label="Note" fullWidth value={postData.note} onChange={(e)=> setPostData({...postData, note: e.target.value})}/>
