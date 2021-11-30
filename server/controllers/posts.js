@@ -1,11 +1,12 @@
 import mongoose from "mongoose";
-import PostMessage from "../models/postMessage.js";
+import PostData from "../models/postData.js";
+import postData from "../models/postData.js";
 
 export const getPosts = async (req, res) => {
     try{
-        const postMessages =  await PostMessage.find();
+        const postData =  await PostData.find();
         
-        res.status(200).json(postMessages);
+        res.status(200).json(postData);
     } catch (error) {
         res.status(404).json({message: error.message})
     }
@@ -16,7 +17,7 @@ export const getPosts = async (req, res) => {
 export const createPost = async (req, res) => {
     const post = req.body
 
-    const newPost = new PostMessage(post);
+    const newPost = new postData(post);
     try {
         await newPost.save();
         
@@ -35,7 +36,7 @@ export const updatePost = async (req, res) => {
     if(!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send("no post with that id");
 
     
-    const updatedPost = await PostMessage.findByIdAndUpdate(_id, {...post, _id}, { new: true});
+    const updatedPost = await postData.findByIdAndUpdate(_id, {...post, _id}, { new: true});
 
     res.json(updatedPost);
 
@@ -46,7 +47,7 @@ export const deletePost = async (req, res) => {
 
     if(!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send("no post with that id");
     
-    await PostMessage.findByIdAndRemove(id);
+    await postData.findByIdAndRemove(id);
    
     console.log("delete")
     res.json({message: "Post deleted successfully."});
@@ -57,8 +58,8 @@ export const likePost = async (req, res) => {
 
     if(!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send("no post with that id");
 
-    const post = await PostMessage.findById(id); 
-    const updatedPost = await PostMessage.findByIdAndUpdate(id, { likeCount: post.likeCount + 1}, {new: true});
+    const post = await postData.findById(id); 
+    const updatedPost = await postData.findByIdAndUpdate(id, { likeCount: post.likeCount + 1}, {new: true});
 
     res.json(updatedPost);
 }
