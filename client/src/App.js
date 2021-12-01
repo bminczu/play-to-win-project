@@ -6,8 +6,8 @@ import {getPosts} from './actions/posts';
 import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
 import useStyles from './styles';
-import Table from './components/Table'
-import BasicTable from "./components/Table";
+import TableComponent from './components/TableComponent'
+
 
 
 const App = ()=> {
@@ -23,20 +23,20 @@ const App = ()=> {
     return (
     <Container maxwidth="lg">
         <AppBar className={classes.appBar} position= "static" color="inherit">
-        <img className={classes.image} src={compete} alt="compete" height="60"/>
-            <Typography className={classes.heading} variant="h2" color="black" align="center"> Play to Win </Typography>
-            <img className={classes.image} src={compete} alt="compete" height="60"/>
+                <img className={classes.image} src={compete} alt="compete" height="60"/>
+            <Typography className={classes.heading} variant="h3"  align="center"> PLAY TO WIN </Typography>
+                <img className={classes.image} src={compete} alt="compete" height="60"/>
         </AppBar>
         <Grow in>
             <Container>
-                <Grid className={classes.mainContainer} container  justify="space-between" alignItems="stretch" spacing={3}>   
+                <Grid className={classes.mainContainer} container  justifyContent="space-between" alignItems="stretch" spacing={3}>   
                     <Grid item xs={12} sm={7}>
                         <Posts setCurrentId={setCurrentId} />
                     </Grid>
                     <Grid item xs={12} sm={4}>
                         <Form currentId={currentId} setCurrentId={setCurrentId}/>
                     </Grid>
-                    <div> {BasicTable()}</div>
+                    <div> <TableComponent/></div>
                 </Grid>
             </Container> 
           </Grow>
