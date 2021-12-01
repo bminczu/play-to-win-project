@@ -5,6 +5,7 @@ import compete from './images/compete.png';
 import {getPosts} from './actions/posts';
 import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
+import FilterContainer from "./components/Filtering/FilterComponent";
 import useStyles from './styles';
 
 
@@ -33,6 +34,9 @@ const App = ()=> {
                     </Grid>
                     <Grid item xs={12} sm={4}>
                         <Form currentId={currentId} setCurrentId={setCurrentId}/>
+                    </Grid>
+                    <Grid item xs={12} sm={4}>
+                        <FilterContainer currentId={currentId} setCurrentId={setCurrentId}/>
                     </Grid>
                 </Grid>
             </Container> 
