@@ -6,6 +6,8 @@ import {getPosts} from './actions/posts';
 import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
 import useStyles from './styles';
+import Table from './components/Table'
+import BasicTable from "./components/Table";
 
 
 const App = ()=> {
@@ -34,6 +36,7 @@ const App = ()=> {
                     <Grid item xs={12} sm={4}>
                         <Form currentId={currentId} setCurrentId={setCurrentId}/>
                     </Grid>
+                    <div> {BasicTable()}</div>
                 </Grid>
             </Container> 
           </Grow>
