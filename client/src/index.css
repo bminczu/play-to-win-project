@@ -9,3 +9,16 @@ background-size: cover;
 .table{
     margin-top: 1.5rem;
 }
+
+
+.heading{
+  
+    background: -webkit-linear-gradient(45deg, rgb(197, 34, 34), rgb(0, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heading-crown{
+    margin-right: 10px;
+    margin-left: 10px;
+}

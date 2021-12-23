@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Container, AppBar, Typography, Grow, Grid} from '@material-ui/core'
 import { useDispatch } from "react-redux";
-import compete from './images/compete.png';
+import crown from './images/crown.png';
 import {getPosts} from './actions/posts';
 import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
@@ -26,9 +26,9 @@ const App = ()=> {
     return (
     <Container maxwidth="lg">
         <AppBar className={classes.appBar} position= "static" color="inherit">
-                <img className={classes.image} src={compete} alt="compete" height="60"/>
-            <Typography className={classes.heading} variant="h3"  align="center"> PLAY TO WIN </Typography>
-                <img className={classes.image} src={compete} alt="compete" height="60"/>
+                <img className="heading-crown" src={crown} alt="crown" height="60"/>
+            <Typography className="heading" variant="h3"> PLAY TO WIN </Typography>
+                <img className="heading-crown" src={crown} alt="crown" height="60"/>
         </AppBar>
         <Grow in>
             <Container>
