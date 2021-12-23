@@ -16,6 +16,9 @@ const App = ()=> {
     const dispatch = useDispatch();
 
     useEffect(() => {
+        document.title = "Play To Win"
+    })
+    useEffect(() => {
         dispatch(getPosts());
     }, [dispatch, currentId])
 
@@ -35,7 +38,9 @@ const App = ()=> {
                     </Grid>
                     <Grid item xs={12} sm={4}>
                         <Form currentId={currentId} setCurrentId={setCurrentId}/>
-                        <TableComponent/>
+                        <div className="table"> 
+                            <TableComponent/>
+                        </div>
                     </Grid>
                      
                 </Grid>
