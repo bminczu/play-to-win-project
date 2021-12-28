@@ -26,10 +26,14 @@ const TableComponent = () => {
 /// count occurance of same player names
 /// return in descending order
 
+const occurrences = posts.map(obj => obj.winner[0]).reduce(function (acc, curr) {
+  return acc[curr] ? ++acc[curr] : acc[curr] = 1, acc
+}, {});
 
-const array = [posts]
+console.log(occurrences)
+// const array = [posts]
 const winner = "Bart"
-const count = console.log(array.filter((obj) => obj.winner === winner).length)
+const count = console.log(posts.map(obj => obj.winner[0]))
 ////https://stackoverflow.com/questions/45547504/counting-occurrences-of-particular-property-value-in-array-of-objects
 // const topPlayers = (array) => {
 
