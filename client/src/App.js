@@ -1,3 +1,4 @@
+
 import React, {useEffect, useState} from "react";
 import {Container, AppBar, Typography, Grow, Grid} from '@material-ui/core'
 import { useDispatch } from "react-redux";
@@ -7,10 +8,11 @@ import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
 import useStyles from './styles';
 import TableComponent from './components/TableComponent'
+import NavBar from "./components/NavBar/NavBar";
 
 
 
-const App = ()=> {
+const App = () => {
     const [currentId, setCurrentId] = useState(null);
     const classes = useStyles();
     const dispatch = useDispatch();
@@ -25,11 +27,9 @@ const App = ()=> {
     
     return (
     <Container maxwidth="lg">
-        <AppBar className={classes.appBar} position= "static" color="inherit">
-                <img className="heading-crown" src={crown} alt="crown" height="60"/>
-            <Typography className="heading" variant="h3"> PLAY TO WIN </Typography>
-                <img className="heading-crown" src={crown} alt="crown" height="60"/>
-        </AppBar>
+      <NavBar/>
+   
+       
         <Grow in>
             <Container>
                 <Grid className={classes.mainContainer} container  justifyContent="space-between" alignItems="stretch" spacing={3}>   

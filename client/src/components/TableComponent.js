@@ -52,9 +52,9 @@ const sort_by = (field, reverse, primer) => {
   }
 }
 
-const alphaPlayers = () => posts.sort(sort_by('player', false, (a)=> a.toUpperCase()))
+const alphaPlayers = () => console.log( posts.sort(sort_by('player', false, (a)=> a.toUpperCase())))
 // console.log(posts.sort(sort_by('player', false, (a)=> a.toUpperCase())))
-
+ 
 // const array = [posts]
 // const winner = "Bart"
 // const count = console.log(posts.map(obj => obj.winner[0]))
