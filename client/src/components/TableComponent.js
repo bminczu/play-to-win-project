@@ -5,6 +5,7 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import { TableSortLabel } from '@material-ui/core';
 
 
 import {useSelector} from 'react-redux'
@@ -26,14 +27,37 @@ const TableComponent = () => {
 /// count occurance of same player names
 /// return in descending order
 
-const occurrences = posts.map(obj => obj.winner[0]).reduce(function (acc, curr) {
-  return acc[curr] ? ++acc[curr] : acc[curr] = 1, acc
-}, {});
+// const winners = posts.map(obj => obj.winner[0]).reduce(function (acc, curr) {
+//   return acc[curr] ? ++acc[curr] : acc[curr] = 1, acc
+// }, {});
 
-console.log(occurrences)
+// winners.sort((a,b) => parseFloat())
+
+
+
+const sort_by = (field, reverse, primer) => {
+
+  const key = primer ?
+    function(x) {
+      return primer(x[field])
+    } :
+    function(x) {
+      return x[field]
+    };
+
+  reverse = !reverse ? 1 : -1;
+
+  return function(a, b) {
+    return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
+  }
+}
+
+const alphaPlayers = () => posts.sort(sort_by('player', false, (a)=> a.toUpperCase()))
+// console.log(posts.sort(sort_by('player', false, (a)=> a.toUpperCase())))
+
 // const array = [posts]
-const winner = "Bart"
-const count = console.log(posts.map(obj => obj.winner[0]))
+// const winner = "Bart"
+// const count = console.log(posts.map(obj => obj.winner[0]))
 ////https://stackoverflow.com/questions/45547504/counting-occurrences-of-particular-property-value-in-array-of-objects
 // const topPlayers = (array) => {
 
@@ -49,7 +73,8 @@ const count = console.log(posts.map(obj => obj.winner[0]))
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Player</TableCell>
+              {/* <TableCell><button > </button> </TableCell> */}
+              <TableCell><button onClick={alphaPlayers}> A-Z </button>Player</TableCell>
               <TableCell align="left">Opponent</TableCell>
               <TableCell align="left">Game&nbsp;Played</TableCell>
               <TableCell align="left">Winner</TableCell>
