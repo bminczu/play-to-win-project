@@ -9,6 +9,7 @@ import Form from './components/Form/Form';
 import useStyles from './styles';
 import TableComponent from './components/TableComponent'
 import NavBar from "./components/NavBar/NavBar";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 
 
