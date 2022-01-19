@@ -5,6 +5,7 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff'
 
 const Input = ({name, handleChange, label, half, autoFocus, type, handleShowPassword}) => {
 
+    return (
     
         <Grid item xs={12} sm={half ? 6 : 12}>
             <TextField
@@ -28,6 +29,7 @@ const Input = ({name, handleChange, label, half, autoFocus, type, handleShowPass
             />
 
         </Grid>
+    )
 }
 
 export default Input;
