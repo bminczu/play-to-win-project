@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import {AppBar, Avatar, Toolbar, Typography, Button} from '@material-ui/core';
 import {Link} from 'react-router-dom';
 import useStyles from './styles';
@@ -8,7 +8,8 @@ import crown from '../../images/crown.png';
 const NavBar = () => {
 
     const classes = useStyles();
-    const user = null;
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')))
+    console.log(user)
     return (
      
 
